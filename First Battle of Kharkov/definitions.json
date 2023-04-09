@@ -118,7 +118,17 @@
     "battleMaps": [
         {
             "name": "Open Grassland",
-            "src": "lib/battleMaps/open_grassland.png",
+            "src": "lib/maps/plains_01.png",
+            "alt": "placeholder"
+        },
+        {
+            "name": "Roadway",
+            "src": "lib/maps/road_horizontal_01.png",
+            "alt": "placeholder"
+        },
+        {
+            "name": "Victory City",
+            "src": "lib/maps/victory_city_01.png",
             "alt": "placeholder"
         }
     ],
@@ -317,7 +327,8 @@
                 "terrain": "empty"
             },
             "13": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "3-13": {
@@ -328,7 +339,8 @@
                 "terrain": "empty"
             },
             "13": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "4-13": {
@@ -342,7 +354,8 @@
                 "terrain": "River"
             },
             "13": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "5-10": {
@@ -365,7 +378,8 @@
                 "terrain": "Bridge"
             },
             "11,12,14": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "6-9": {
@@ -391,7 +405,8 @@
                 "terrain": "River"
             },
             "11,15": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "7-9": {
@@ -414,10 +429,12 @@
                 "terrain": "River"
             },
             "14": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "10,11,13": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             }
         },
         "8-9": {
@@ -446,10 +463,12 @@
                 "terrain": "River"
             },
             "10,14": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "11,13": {
                 "terrain": "Victory City",
+                "battleMap": "Victory City",
                 "overlays": ["Victory City", "City Full"]
             }
         },
@@ -482,10 +501,12 @@
                 "terrain": "River"
             },
             "9,13": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "12": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             }
         },
         "10-9": {
@@ -511,14 +532,17 @@
                 "terrain": "River"
             },
             "9,14": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "10": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             }
         },
         "11-9": {
             "terrain": "Forest",
+            "battleMap": "Forest",
             "overlays": ["Road BL", "Road TR", "Forest Full"]
         },
         "11-10": {
@@ -541,15 +565,18 @@
                 "terrain": "River"
             },
             "8,14": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "12-7": {
             "terrain": "Forest",
+            "battleMap": "Forest",
             "overlays": ["Forest Full"]
         },
         "12-8": {
             "terrain": "Forest",
+            "battleMap": "Forest",
             "overlays": ["Forest Full", "Road BL", "Road TR"]
         },
         "12-10": {
@@ -569,11 +596,13 @@
                 "terrain": "River"
             },
             "8,14,24": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "13-6": {
             "terrain": "Forest",
+            "battleMap": "Forest",
             "overlays": ["Forest Full"]
         },
         "13-7": {
@@ -581,6 +610,7 @@
         },
         "13-8": {
             "terrain": "Forest",
+            "battleMap": "Forest",
             "overlays": ["Road TR", "Road BL"],
             "units": {
                 "Germany": ["Infantry", "Infantry", "Infantry", "Tank"]
@@ -609,7 +639,8 @@
                 "terrain": "River"
             },
             "7,13,23": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "14-7": {
@@ -635,7 +666,8 @@
                 "terrain": "River"
             },
             "8,13,23": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "15-7": {
@@ -655,7 +687,8 @@
         },
         "16-": {
             "2,12,22": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "4,8,9,10": {
                 "terrain": "River"
@@ -668,7 +701,8 @@
                 "terrain": "Bridge"
             },
             "16": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             }
         },
         "16-2": {
@@ -676,6 +710,7 @@
         },
         "16-4": {
             "terrain": "Forest",
+            "battleMap": "Forest",
             "overlays": ["River TL", "River BR", "Forest Full"]
         },
         "16-8": {
@@ -695,6 +730,7 @@
         },
         "16-13": {
             "terrain": "Forest",
+            "battleMap": "Forest",
             "overlays": ["Forest Full"]
         },
         "16-16": {
@@ -702,6 +738,7 @@
         },
         "16-17": {
             "terrain": "Victory City",
+            "battleMap": "Victory City",
             "overlays": ["Victory City", "City Full", "Road L", "Road BL", "Road BR"],
             "units": {
                 "USSR": ["Infantry", "Infantry", "Infantry", "Artillery"]
@@ -718,10 +755,12 @@
                 "terrain": "Bridge"
             },
             "3,7,18,19": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "16,17,18": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             }
         },
         "17-3": {
@@ -750,6 +789,7 @@
         },
         "17-14": {
             "terrain": "Forest",
+            "battleMap": "Forest",
             "overlays": ["Forest Full"]
         },
         "17-16": {
@@ -784,16 +824,19 @@
                 "terrain": "River"
             },
             "3,4,5,7,8,9,10,11,20": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "6,15": {
                 "terrain": "Bridge"
             },
             "22": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             },
             "21": {
                 "terrain": "Victory City",
+                "battleMap": "Victory City",
                 "overlays": ["Victory City"]
             }
         },
@@ -859,7 +902,8 @@
         },
         "19-": {
             "5,14,15": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "4,9,10": {
                 "terrain": "Ocean"
@@ -871,7 +915,8 @@
                 "terrain": "Bridge"
             },
             "3,5,11,13,22": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             },
             "24": {
                 "terrain": "empty"
@@ -918,14 +963,17 @@
                 "terrain": "Ocean"
             },
             "5,6,7,8,9": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "4,11": {
                 "terrain": "Victory City",
+                "battleMap": "Victory City",
                 "overlays": ["Victory City"]
             },
             "5,12,13": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             },
             "12,13": {
                 "overlays": ["City Full"]
@@ -975,7 +1023,8 @@
                 "terrain": "Ocean"
             },
             "10": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "21-10": {
@@ -989,13 +1038,16 @@
                 "terrain": "Ocean"
             },
             "10": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "11,13": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             },
             "12": {
                 "terrain": "Victory City",
+                "battleMap": "Victory City",
                 "overlays": ["Victory City"]
             }
         },
@@ -1025,10 +1077,12 @@
                 "terrain": "Ocean"
             },
             "10,13": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "12": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             }
         },
         "23-10": {
@@ -1048,10 +1102,12 @@
                 "terrain": "empty"
             },
             "9,13,14": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "8,9": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             }
         },
         "24-8": {
@@ -1071,13 +1127,16 @@
                 "terrain": "empty"
             },
             "13": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             },
             "10": {
-                "terrain": "City"
+                "terrain": "City",
+                "battleMap": "Victory City"
             },
             "9": {
                 "terrain": "Victory City",
+                "battleMap": "Victory City",
                 "overlays": ["Victory City", "City Full"]
             }
         },
@@ -1101,7 +1160,8 @@
                 "terrain": "empty"
             },
             "7,8,9,10,11,12": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "26-7": {
@@ -1130,7 +1190,8 @@
                 "terrain": "empty"
             },
             "12,13": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "27-12": {
@@ -1144,7 +1205,8 @@
                 "terrain": "empty"
             },
             "12": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "28-12": {
@@ -1155,7 +1217,8 @@
                 "terrain": "empty"
             },
             "13": {
-                "terrain": "Road"
+                "terrain": "Road",
+                "battleMap": "Roadway"
             }
         },
         "29-13": {
