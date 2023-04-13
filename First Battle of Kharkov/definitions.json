@@ -130,6 +130,11 @@
             "name": "Victory City",
             "src": "lib/maps/victory_city_01.png",
             "alt": "placeholder"
+        },
+        {
+            "name": "Forest",
+            "src": "lib/maps/forest_01.png",
+            "alt": "placeholder"
         }
     ],
     "overlays": [
