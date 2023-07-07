@@ -1,0 +1,10 @@
+{
+  "scripts": [],
+  "factions": [],
+  "unit_templates": [],
+  "terrains": [],
+  "battleMaps": [],
+  "columns": 10,
+  "rows": 10,
+  "tiles": {}
+}

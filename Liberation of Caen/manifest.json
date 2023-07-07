@@ -1,0 +1,14 @@
+{
+  "format_version": 1,
+
+  "UUID": "2b9621ba-1463-4258-ae68-b9d74be8dadb",
+  "name": "Liberation of Caen",
+  "factions" : "British vs. Germany",
+  "size": {
+    "columns": 10,
+    "rows": 10
+  },
+
+  "scenarioDefinition": "definitions.json",
+  "version": "1.0.0"
+}
