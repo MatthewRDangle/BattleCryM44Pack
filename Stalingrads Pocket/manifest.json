@@ -2,8 +2,8 @@
   "format_version": 1,
 
   "UUID": "2b9621ba-1463-4258-ae68-b9d74be8dadb",
-  "name": "Liberation of Caen",
-  "factions" : "British vs. Germany",
+  "name": "Stalingrads Pocket",
+  "factions" : "USSR vs. Germany",
   "size": {
     "columns": 10,
     "rows": 10
