@@ -1,10 +1,143 @@
 {
-  "scripts": [],
-  "factions": [],
-  "unit_templates": [],
-  "terrains": [],
+  "devMode": true,
+
+  "columns": 27,
+  "rows": 22,
+
+  "currentTurn": "USSR",
+  "turnOrder": ["USSR", "Germany"],
+
+  "factions": [
+    {
+      "name": "USSR",
+      "color": {
+        "text": "#FDB221",
+        "background": "#CC0000"
+      },
+      "flag": {
+        "src": "lib/flags/ussr_flag.png",
+        "alt": ""
+      },
+      "icon": {
+        "src": "lib/icons/ussr_icon.png",
+        "alt": ""
+      }
+    },
+    {
+      "name": "Germany",
+      "color": {
+        "text": "#151A1E",
+        "background": "#9BADB7"
+      },
+      "flag": {
+        "src": "lib/flags/germany_flag.png",
+        "alt": ""
+      },
+      "icon": {
+        "src": "lib/icons/germany_icon.png",
+        "alt": ""
+      }
+    }
+  ],
+
+  "unit_templates": {
+    "Infantry": {
+      "health": 4,
+      "available_movement": 4,
+      "movement_cap": 4,
+      "type": "Infantry",
+      "icon": {
+        "src": "lib/icons/infantry.svg",
+        "alt": "Helmet"
+      }
+    },
+    "Tank": {
+      "health": 3,
+      "available_movement": 6,
+      "movement_cap": 6,
+      "type": "Armour",
+      "icon": {
+        "src": "lib/icons/tank.svg",
+        "alt": "Tank"
+      }
+    },
+    "Artillery": {
+      "health": 2,
+      "available_movement": 2,
+      "movement_cap": 2,
+      "type": "Artillery",
+      "icon": {
+        "src": "lib/icons/artillery.svg",
+        "alt": "Artillery"
+      },
+      "indirect_attack": {
+        "range": 3,
+        "damage": 1,
+        "chance": 50
+      }
+    }
+  },
+
+  "terrains": [
+    {
+      "name": "Open Field",
+      "color": "#F2F2F2",
+      "movement_cost": 2,
+      "max_units_allowed_per_faction": 8
+    },
+    {
+      "name": "Road",
+      "color": "#F2F2F2",
+      "movement_cost": 2,
+      "movement_cost_modifiers_by_type": {},
+      "max_units_allowed_per_faction": 8
+    },
+    {
+      "name": "Hills",
+      "color": "#DFDFDF",
+      "movement_cost": 2,
+      "max_units_allowed_per_faction": 8
+    },
+    {
+      "name": "Wall",
+      "color": "#DFDFDF",
+      "movement_cost": 2,
+      "inaccessible_by": [],
+      "max_units_allowed_per_faction": 8
+    },
+    {
+      "name": "Mountains",
+      "color": "#C9C9C9",
+      "movement_cost": 2,
+      "max_units_allowed_per_faction": 8
+    },
+    {
+      "name": "Ice",
+      "color": "#C9C9C9",
+      "movement_cost": 2,
+      "max_units_allowed_per_faction": 8
+    },
+    {
+      "name": "Shallow Water",
+      "color": "#C9C9C9",
+      "movement_cost": 2,
+      "max_units_allowed_per_faction": 8
+    },
+    {
+      "name": "Deep Water",
+      "color": "#C9C9C9",
+      "movement_cost": 2,
+      "max_units_allowed_per_faction": 8
+    }
+  ],
+
   "battleMaps": [],
-  "columns": 10,
-  "rows": 10,
-  "tiles": {}
+
+  "tiles": {
+    "*": {
+      "terrain": "Open Field"
+    }
+  },
+
+  "scripts": []
 }

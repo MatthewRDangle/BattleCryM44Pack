@@ -63,6 +63,11 @@
             "icon": {
                 "src": "lib/icons/artillery.svg",
                 "alt": "Artillery"
+            },
+            "indirect_attack": {
+                "range": 3,
+                "damage": 1,
+                "chance": 50
             }
         }
     },
@@ -75,44 +80,69 @@
         {
             "name": "Open Field",
             "color": "#ACC6A1",
-            "movement_cost": 5
+            "movement_cost": 5,
+            "max_units_allowed_per_faction": 6
         },
         {
             "name": "Ocean",
             "color": "#B9CDEB",
             "movement_cost": 5,
+            "max_units_allowed_per_faction": 6,
             "inaccessible_by": ["Infantry", "Armour"]
         },
         {
             "name": "River",
             "color": "#ACC6A1",
             "movement_cost": 5,
+            "max_units_allowed_per_faction": 6,
             "inaccessible_by": ["Infantry", "Armour"]
         },
         {
             "name": "Bridge",
             "color": "#ACC6A1",
-            "movement_cost": 5
+            "movement_cost": 5,
+            "max_units_allowed_per_faction": 6,
+            "protection": {
+                "chance_modifier": -25
+            }
         },
         {
             "name": "Road",
             "color": "#ACC6A1",
-            "movement_cost": 5
+            "movement_cost": 5,
+            "max_units_allowed_per_faction": 6,
+            "protection": {
+                "chance_modifier": 25
+            }
         },
         {
             "name": "City",
             "color": "#ACC6A1",
-            "movement_cost": 5
+            "movement_cost": 5,
+            "max_units_allowed_per_faction": 6,
+            "protection": {
+                "chance_modifier": -50,
+                "damage_modifier": -1
+            }
         },
         {
             "name": "Victory City",
             "color": "#ACC6A1",
-            "movement_cost": 5
+            "movement_cost": 5,
+            "max_units_allowed_per_faction": 6,
+            "protection": {
+                "chance_modifier": -50,
+                "damage_modifier": -1
+            }
         },
         {
             "name": "Forest",
             "color": "#ACC6A1",
-            "movement_cost": 5
+            "movement_cost": 5,
+            "max_units_allowed_per_faction": 6,
+            "protection": {
+                "chance_modifier": -25
+            }
         }
     ],
     "battleMaps": [

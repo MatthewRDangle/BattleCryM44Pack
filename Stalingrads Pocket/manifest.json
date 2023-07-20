@@ -5,8 +5,8 @@
   "name": "Stalingrads Pocket",
   "factions" : "USSR vs. Germany",
   "size": {
-    "columns": 10,
-    "rows": 10
+    "columns": 27,
+    "rows": 22
   },
 
   "scenarioDefinition": "definitions.json",
