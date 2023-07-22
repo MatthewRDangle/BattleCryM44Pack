@@ -1,6 +1,4 @@
 {
-  "devMode": true,
-
   "columns": 27,
   "rows": 22,
 
@@ -83,59 +81,1514 @@
       "name": "Open Field",
       "color": "#F2F2F2",
       "movement_cost": 2,
-      "max_units_allowed_per_faction": 8
+      "max_units_allowed_per_faction": 7,
+      "protection": {
+        "chance_modifier": 15
+      }
+    },
+    {
+      "name": "City",
+      "color": "#F2F2F2",
+      "movement_cost": 2,
+      "movement_cost_modifiers_by_type": {
+        "Armour": 1
+      },
+      "max_units_allowed_per_faction": 7,
+      "protection": {
+        "chance_modifier": -15
+      }
+    },
+    {
+      "name": "Victory City",
+      "color": "#F2F2F2",
+      "movement_cost": 2,
+      "movement_cost_modifiers_by_type": {
+        "Armour": 1
+      },
+      "max_units_allowed_per_faction": 7,
+      "protection": {
+        "chance_modifier": -25
+      }
+    },
+    {
+      "name": "Forest",
+      "color": "#F2F2F2",
+      "movement_cost": 2,
+      "movement_cost_modifiers_by_type": {
+        "Armour": 2
+      },
+      "max_units_allowed_per_faction": 7,
+      "protection": {
+        "chance_modifier": -10
+      }
     },
     {
       "name": "Road",
       "color": "#F2F2F2",
-      "movement_cost": 2,
-      "movement_cost_modifiers_by_type": {},
-      "max_units_allowed_per_faction": 8
+      "movement_cost": 1,
+      "max_units_allowed_per_faction": 7,
+      "protection": {
+        "chance_modifier": 10
+      }
     },
     {
       "name": "Hills",
       "color": "#DFDFDF",
       "movement_cost": 2,
-      "max_units_allowed_per_faction": 8
+      "max_units_allowed_per_faction": 7
     },
     {
       "name": "Wall",
       "color": "#DFDFDF",
       "movement_cost": 2,
-      "inaccessible_by": [],
-      "max_units_allowed_per_faction": 8
+      "movement_cost_modifiers_by_type": {
+        "Armour": 2
+      },
+      "max_units_allowed_per_faction": 7,
+      "protection": {
+        "chance_modifier": -15
+      }
     },
     {
-      "name": "Mountains",
-      "color": "#C9C9C9",
+      "name": "Frozen Water",
+      "color": "#CBE6EF",
       "movement_cost": 2,
-      "max_units_allowed_per_faction": 8
-    },
-    {
-      "name": "Ice",
-      "color": "#C9C9C9",
-      "movement_cost": 2,
-      "max_units_allowed_per_faction": 8
-    },
-    {
-      "name": "Shallow Water",
-      "color": "#C9C9C9",
-      "movement_cost": 2,
-      "max_units_allowed_per_faction": 8
+      "max_units_allowed_per_faction": 7,
+      "protection": {
+        "chance_modifier": 5
+      }
     },
     {
       "name": "Deep Water",
-      "color": "#C9C9C9",
+      "color": "#658BC3",
       "movement_cost": 2,
-      "max_units_allowed_per_faction": 8
+      "max_units_allowed_per_faction": 7,
+      "inaccessible_by": ["Infantry", "Armour", "Artillery"]
     }
   ],
 
-  "battleMaps": [],
+  "battleMaps": [
+    {
+      "name": "Open Field",
+      "src": "lib/maps/open_field.png",
+      "alt": "placeholder"
+    },
+    {
+      "name": "City",
+      "src": "lib/maps/city.png",
+      "alt": "placeholder"
+    },
+    {
+      "name": "Victory City",
+      "src": "lib/maps/victory_city.png",
+      "alt": "placeholder"
+    },
+    {
+      "name": "Forest",
+      "src": "lib/maps/forest.png",
+      "alt": "placeholder"
+    },
+    {
+      "name": "Road",
+      "src": "lib/maps/road.png",
+      "alt": "placeholder"
+    },
+    {
+      "name": "Frozen River",
+      "src": "lib/maps/frozen_rivers.png",
+      "alt": "placeholder"
+    },
+    {
+      "name": "Hills",
+      "src": "lib/maps/hills.png",
+      "alt": "placeholder"
+    },
+    {
+      "name": "Wall",
+      "src": "lib/maps/wall.png",
+      "alt": "placeholder"
+    }
+  ],
+
+  "overlays": [
+    {
+      "name": "City Alt 1",
+      "images": [
+        "lib/overlays/City_Alt_1.png"
+      ]
+    },
+    {
+      "name": "City Alt 2",
+      "images": [
+        "lib/overlays/City_Alt_2.png"
+      ]
+    },
+    {
+      "name": "Factory Alt 1",
+      "images": [
+        "lib/overlays/Factory_Alt_1.png"
+      ]
+    },
+    {
+      "name": "Factory Alt 2",
+      "images": [
+        "lib/overlays/Factory_Alt_2.png"
+      ]
+    },
+    {
+      "name": "Forest Alt 1",
+      "images": [
+        "lib/overlays/Forest_Alt_1.png"
+      ]
+    },
+    {
+      "name": "Forest Alt 2",
+      "images": [
+        "lib/overlays/Forest_Alt_2.png"
+      ]
+    },
+    {
+      "name": "Forest Alt 3",
+      "images": [
+        "lib/overlays/Forest_Alt_3.png"
+      ]
+    },
+    {
+      "name": "Road Back Slant",
+      "images": [
+        "lib/overlays/Road_Backword_Slant.png"
+      ]
+    },
+    {
+      "name": "Road Curve BL",
+      "images": [
+        "lib/overlays/Road_Curve_BL.png"
+      ]
+    },
+    {
+      "name": "Road Curve BR",
+      "images": [
+        "lib/overlays/Road_Curve_BR.png"
+      ]
+    },
+    {
+      "name": "Road Curve TL",
+      "images": [
+        "lib/overlays/Road_Curve_TL.png"
+      ]
+    },
+    {
+      "name": "Road Curve TR",
+      "images": [
+        "lib/overlays/Road_Curve_TR.png"
+      ]
+    },
+    {
+      "name": "Road Forward Slant",
+      "images": [
+        "lib/overlays/Road_Forward_Slant.png"
+      ]
+    },
+    {
+      "name": "Road Horizontal",
+      "images": [
+        "lib/overlays/Road_Horizontal.png"
+      ]
+    },
+    {
+      "name": "Road YSplit BR",
+      "images": [
+        "lib/overlays/Road_Y-Split_BR.png"
+      ]
+    },
+    {
+      "name": "Victory City",
+      "images": [
+        "lib/overlays/Tile_Victory.png"
+      ]
+    },
+    {
+      "name": "Wall Back Slant",
+      "images": [
+        "lib/overlays/Wall_Back_Slant.png"
+      ]
+    },
+    {
+      "name": "Wall Curved Bottom",
+      "images": [
+        "lib/overlays/Wall_Curved_Bottom.png"
+      ]
+    },
+    {
+      "name": "Wall Curved Left",
+      "images": [
+        "lib/overlays/Wall_Curved_left.png"
+      ]
+    },
+    {
+      "name": "Wall Curved Right",
+      "images": [
+        "lib/overlays/Wall_Curved_Right.png"
+      ]
+    },
+    {
+      "name": "Wall Forward Slant",
+      "images": [
+        "lib/overlays/Wall_Forward_Slant.png"
+      ]
+    },
+    {
+      "name": "Wall Horizontal",
+      "images": [
+        "lib/overlays/Wall_Horizontal.png"
+      ]
+    },
+    {
+      "name": "Wall Vertical",
+      "images": [
+        "lib/overlays/Wall_Vertical.png"
+      ]
+    }
+  ],
 
   "tiles": {
+
     "*": {
-      "terrain": "Open Field"
+      "terrain": "Open Field",
+      "battleMap": "Open Field"
+    },
+
+    "1-": {
+      "1,2,4,5,9,10,11": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "16": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "15,17,18,19": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "6": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "7,9": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 2"]
+      },
+      "3": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "20,21,22,24,25,26,27": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "2-": {
+      "1,2,5,9,10": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "15": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "13,18": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "17": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["Factory Alt 1"]
+      },
+      "14,16,19": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 2"]
+      },
+      "6,7,8": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "3": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "20,21,24,25,26,27": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "2-17": {
+      "units": {
+        "Germany": ["Infantry", "Infantry"]
+      }
+    },
+
+    "3-": {
+      "1,2,5,6,9,23": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "3,15": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "14": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "10,17,18": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 2"]
+      },
+      "7":{
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 2"]
+      },
+      "8": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "4": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "20": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "21,25,26,27": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "3-15": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "4-": {
+      "1,8,9,23,24": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "2": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "10,17": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "4": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve TR"]
+      },
+      "5": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal"]
+      },
+      "6": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve BL"]
+      },
+      "19,20": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "25,26,27": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "4-10": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "4-23": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Artillery", "Artillery"]
+      }
+    },
+
+    "4-24": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Tank"]
+      }
+    },
+
+    "5-": {
+      "4,5,22,23,24": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "2": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "16": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Back Slant"]
+      },
+      "9,17": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "10": {
+        "terrain": "Victory City",
+        "battleMap": "Victory City",
+        "overlays": ["Victory City", "Factory Alt 2"]
+      },
+      "11,13": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "6":{
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "8": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 2"]
+      },
+      "7": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "24": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "25,26,27": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "5-11": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "5-13": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "5-17": {
+      "units": {
+        "Germany": ["Infantry", "Infantry"]
+      }
+    },
+
+    "5-10": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Artillery", "Artillery"]
+      }
+    },
+
+    "5-22": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Tank", "Artillery"]
+      }
+    },
+
+    "5-23": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank"]
+      }
+    },
+
+    "5-24": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Tank", "Tank"]
+      }
+    },
+
+    "6-": {
+      "5,21,23": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "16": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Back Slant"]
+      },
+      "9,10,12": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "4":{
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "7": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road YSplit BR"]
+      },
+      "8": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal"]
+      },
+      "19": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "26,27": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "6-7": {
+      "units": {
+        "Germany": ["Tank", "Tank", "Tank", "Tank", "Tank"]
+      }
+    },
+
+    "6-16": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "6-23": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Tank", "Tank"]
+      }
+    },
+
+    "7-": {
+      "3,18": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Back Slant"]
+      },
+      "11,12": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "8": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "19": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "26,27": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "7-12": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Artillery", "Artillery"]
+      }
+    },
+
+    "8-": {
+      "2,5,6": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "3,18": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Left"]
+      },
+      "10,11,19": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "8": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "20,21,24,25,26": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "23,27": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "8-10": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Tank", "Artillery", "Artillery"]
+      }
+    },
+
+    "8-18": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "8-22": {
+      "units": {
+        "USSR": ["Infantry", "Infantry"]
+      }
+    },
+
+    "9-": {
+      "5,6": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "3,18": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "16,17": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 2"]
+      },
+      "7":{
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "9": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "20,21,22,23,24,25": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      }
+    },
+
+    "19-16": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "9-17": {
+      "units": {
+        "Germany": ["Infantry", "Infantry"]
+      }
+    },
+
+    "10-": {
+      "5,24,25": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "16": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Right"]
+      },
+      "12,13,14,15": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "4,6,7": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "9": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "17,18,20,21,22": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "19": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "10-12": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery"]
+      }
+    },
+
+    "10-24": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery", "Artillery"]
+      }
+    },
+
+    "11-": {
+      "6,24,25": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "3": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "17": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Left"]
+      },
+      "14,15,16": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "13": {
+        "terrain": "Victory City",
+        "battleMap": "Victory City",
+        "overlays": ["Victory City", "Factory Alt 2"]
+      },
+      "5": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "10": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve TR"]
+      },
+      "11": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal", "Road Curve BR"]
+      },
+      "12": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal"]
+      },
+      "18,21,22": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "19,20": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "11-13": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Artillery", "Artillery"]
+      }
+    },
+
+    "11-16": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry"]
+      }
+    },
+
+    "11-17": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "12-": {
+      "5,21,24,25": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "2": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Right"]
+      },
+      "15": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Bottom"]
+      },
+      "14": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "1": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "7": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 2"]
+      },
+      "10": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Forward Slant"]
+      },
+      "17,18,19,20": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      }
+    },
+
+    "12-15": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank"]
+      }
+    },
+
+    "12-21": {
+      "units": {
+        "USSR": ["Infantry", "Infantry"]
+      }
+    },
+
+    "13-": {
+      "2,5,6,21,22,24,25,26": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "3": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Back Slant"]
+      },
+      "15": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Right"]
+      },
+      "16": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Left"]
+      },
+      "10,13": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "12": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 2"]
+      },
+      "1,7": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "17,18": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      }
+    },
+
+    "13-10": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery"]
+      }
+    },
+
+    "13-13": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry"]
+      }
+    },
+
+    "13-15": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Tank"]
+      }
+    },
+
+    "13-20": {
+      "units": {
+        "USSR": ["Infantry", "Infantry"]
+      }
+    },
+
+    "13-21": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry"]
+      }
+    },
+
+    "13-22": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Tank", "Tank"]
+      }
+    },
+
+    "14-": {
+      "2,4,8,20,21,22,24,25": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "9,10,11,12": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "1,5,7": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "17,18": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "14-20": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Artillery", "Artillery"]
+      }
+    },
+
+    "14-21": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Infantry"]
+      }
+    },
+
+    "14-24": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Tank"]
+      }
+    },
+
+    "15-": {
+      "4,5,8,9,15,25,26": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "14": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "11": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 2"]
+      },
+      "12": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "10": {
+        "terrain": "Victory City",
+        "battleMap": "Victory City",
+        "overlays": ["Victory City", "Factory Alt 2"]
+      },
+      "7": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest ALt 1"]
+      },
+      "16,17,18,19": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      }
+    },
+
+    "15-10": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Artillery", "Artillery"]
+      }
+    },
+
+    "15-12": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Artillery", "Artillery"]
+      }
+    },
+
+    "15-14": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "15-25": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Tank", "Tank"]
+      }
+    },
+
+    "15-26": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Artillery", "Artillery"]
+      }
+    },
+
+    "16-": {
+      "9,22,23": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "13": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "10,12,20,21": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "1,2,3,4,5,6": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal"]
+      },
+      "7": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve BL"]
+      },
+      "15,16,18,19": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      }
+    },
+
+    "16-3": {
+      "units": {
+        "Germany": ["Tank", "Tank", "Tank", "Tank", "Tank"]
+      }
+    },
+
+    "16-10": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery"]
+      }
+    },
+
+    "16-12": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Tank"]
+      }
+    },
+
+    "16-20": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery"]
+      }
+    },
+
+    "16-21": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery"]
+      }
+    },
+
+    "17-": {
+      "22,23,24": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "13": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "12,21": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "7": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve BR"]
+      },
+      "8": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal", "Road Curve TR"]
+      },
+      "9": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal"]
+      },
+      "10": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve TL"]
+      },
+      "14,15,16,18,20": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "19": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "17-8": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Tank", "Tank"]
+      }
+    },
+
+    "17-22": {
+      "units": {
+        "USSR": ["Infantry", "Artillery"]
+      }
+    },
+
+    "17-21": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery"]
+      }
+    },
+
+    "18-": {
+      "22": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "11": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Horizontal"]
+      },
+      "12": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Left"]
+      },
+      "8,27": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "26": {
+        "terrain": "Victory City",
+        "battleMap": "Victory City",
+        "overlays": ["Victory City", "City Alt 2"]
+      },
+      "1": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "6": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Forward Slant"]
+      },
+      "21": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Back Slant"]
+      },
+      "23": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve BR"]
+      },
+      "24,25": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal"]
+      },
+      "13,15,18,19": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "14": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "18-8": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank"]
+      }
+    },
+
+    "18-12": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "18-20": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Tank"]
+      }
+    },
+
+    "18-26": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery", "Artillery"]
+      }
+    },
+
+    "18-23": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery", "Artillery"]
+      }
+    },
+
+    "18-27": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Tank", "Tank", "Tank", "Tank"]
+      }
+    },
+
+    "19-": {
+      "24,26": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "4": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Curved Right"]
+      },
+      "10": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "9,27": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "5": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "6": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Forward Slant"]
+      },
+      "22": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve TR"]
+      },
+      "23": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve TL"]
+      },
+      "13,15,19,20": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "14": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "19-18": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry"]
+      }
+    },
+
+    "19-24": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry"]
+      }
+    },
+
+    "20-": {
+      "3,20,23,24,26": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "4": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Back Slant"]
+      },
+      "9": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Forward Slant"]
+      },
+      "8,27": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "2": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "5": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Forward Slant"]
+      },
+      "12,13,14,17,18,19": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      }
+    },
+
+    "20-9": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Artillery"]
+      }
+    },
+
+    "20-20": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank"]
+      }
+    },
+
+    "21-": {
+      "20,23,24,26,27": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "7": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "4": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Curve BR"]
+      },
+      "5": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal", "Road Curve TL"]
+      },
+      "6": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Horizontal"]
+      },
+      "12,13,14,15,19": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "18": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "21-7": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Tank", "Tank", "Artillery"]
+      }
+    },
+
+    "21-20": {
+      "units": {
+        "USSR": ["Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Tank", "Artillery"]
+      }
+    },
+
+    "21-26": {
+      "units": {
+        "USSR": ["Tank", "Tank", "Tank", "Tank", "Tank", "Tank"]
+      }
+    },
+
+    "22-": {
+      "22,23,25,26,27": {
+        "terrain": "Hills",
+        "battleMap": "Hills"
+      },
+      "9": {
+        "terrain": "Wall",
+        "battleMap": "Wall",
+        "overlays": ["Wall Back Slant"]
+      },
+      "6,7,8": {
+        "terrain": "City",
+        "battleMap": "City",
+        "overlays": ["City Alt 1"]
+      },
+      "4": {
+        "terrain": "Forest",
+        "battleMap": "Forest",
+        "overlays": ["Forest Alt 1"]
+      },
+      "3": {
+        "terrain": "Road",
+        "battleMap": "Road",
+        "overlays": ["Road Forward Slant"]
+      },
+      "13,14,18,19": {
+        "terrain": "Frozen Water",
+        "battleMap": "Frozen Water"
+      },
+      "12": {
+        "terrain": "Deep Water"
+      }
+    },
+
+    "22-8": {
+      "units": {
+        "Germany": ["Infantry", "Infantry", "Infantry", "Infantry", "Infantry", "Tank", "Artillery"]
+      }
     }
   },
 
