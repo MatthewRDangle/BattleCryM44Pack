@@ -1,15 +1,14 @@
 ---
 
-version: "1.0.0"
+version: 1.0.0
 format_version: 1
-scenarioDefinition: "definitions.json"
-UUID: "2b9621ba-1463-4258-ae68-b9d74be8dadb"
+scenarioDefinition: definitions.json
+UUID: 2b9621ba-1463-4258-ae68-b9d74be8dadb
 
-name: "Stalingrads Pocket"
-factions : "USSR vs. Germany"
-size: {
-  columns: 27,
+name: Stalingrads Pocket
+factions: USSR vs. Germany
+size:
+  columns: 27
   rows: 22
-}
 
 ...
