@@ -2,7 +2,7 @@
 
 version: 1.0.0
 format_version: 1
-scenarioDefinition: definitions.json
+scenarioDefinition: definitions.yml
 UUID: 2b9621ba-1463-4258-ae68-b9d74be8dadb
 
 name: Stalingrads Pocket
