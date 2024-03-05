@@ -1,4 +1,5 @@
 ---
+devMode: true
 columns: 27
 rows: 22
 
@@ -1487,6 +1488,41 @@ tiles:
         - Tank
         - Artillery
 
-scripts: []
-
+scripts:
+  - interval: 1
+    when: end_of_turn
+    conditions:
+      - name: is_turn_number
+        params:
+          number: 10
+      - name: is_faction_turn
+        params:
+          faction: USSR
+    then:
+      onSuccess:
+        - name: failure_for_faction
+          params:
+            factions:
+              - USSR
+  - interval: 1
+    when: end_of_turn
+    conditions:
+      - name: faction_occupies_tile
+        params:
+          faction: USSR
+          tile: 5-10
+      - name: faction_occupies_tile
+        params:
+          faction: USSR
+          tile: 11-13
+      - name: faction_occupies_tile
+        params:
+          faction: USSR
+          tile: 15-10
+    then:
+      onSuccess:
+        - name: victory_for_faction
+          params:
+            factions:
+              - USSR
 ...
